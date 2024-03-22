@@ -459,6 +459,38 @@
                 
             } while (sair == 1);
             */
+
+            int cod = 0;
+            int sair = 0;
+
+            do {
+                Console.WriteLine("Digite o código de um produto");
+                cod = int.Parse(Console.ReadLine());
+
+                if (cod == 1)
+                {
+                    Console.WriteLine(" 001 - Código para parafuso");
+                }
+
+                else if (cod == 2)
+                {
+                    Console.WriteLine(" 002 - Código para porca");
+                }
+
+                else if (cod == 3)
+                {
+                    Console.WriteLine(" 003 - Código para prego");
+                }
+
+                else
+                {
+                    Console.WriteLine("Não definido");
+                }
+
+                Console.WriteLine("Deseja realizar nova pesquisa 1-Sim 2-Não");
+                sair = int.Parse(Console.ReadLine());
+
+            } while (sair == 1);
         }
     }
 }
