@@ -1,4 +1,7 @@
-﻿namespace ConsoleApp1
+﻿using System.Security.AccessControl;
+using System.Security.Cryptography.X509Certificates;
+
+namespace ConsoleApp1
 {
     internal class Program
     {
@@ -458,7 +461,7 @@
 
                 
             } while (sair == 1);
-            */
+           
 
             int cod = 0;
             int sair = 0;
@@ -491,6 +494,99 @@
                 sair = int.Parse(Console.ReadLine());
 
             } while (sair == 1);
+             */
+
+            int operador;
+            int sair = 0;
+            
+
+            do
+            {
+                Console.WriteLine("CALCULADORA");
+
+                Console.WriteLine("Qual operação deseja realizar");
+                Console.WriteLine("1 - Adição");
+                Console.WriteLine("2 - Subtração");
+                Console.WriteLine("3 - Multiplicação");
+                Console.WriteLine("4 - Divisão");
+                Console.WriteLine("0 - Alterar numeros");
+                operador = int.Parse(Console.ReadLine());
+                if (operador == 1)
+                {
+                    Somar();
+                    sair = 0;
+                }
+
+                else if (operador == 2)
+                {
+                    Subtrair();
+                    sair = 0;
+                }
+
+                else if (operador == 3)
+                {
+                    Multiplicar();
+                    sair = 0;
+                }
+
+                else if (operador == 4)
+                {
+                    Dividir();
+                    sair = 0;
+                }
+
+                else if (operador == 5)
+                {
+                    sair = 1;
+                }
+
+
+            } while (sair == 1);
+        }
+        public static void Somar()
+        {
+            Console.WriteLine("Digite o primeiro numero: ");
+            int numero1 = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Digite o segundo numero: ");
+            int numero2 = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("A soma é: " + (numero1 + numero2));
+        }
+
+        public static void Subtrair()
+        {
+            Console.WriteLine("Digite o primeiro numero: ");
+            int numero1 = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Digite o segundo numero: ");
+            int numero2 = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("A soma é: " + (numero1 - numero2));
+        }
+
+        public static void Multiplicar()
+        {
+            Console.WriteLine("Digite o primeiro numero: ");
+            int numero1 = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Digite o segundo numero: ");
+            int numero2 = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("A soma é: " + (numero1 * numero2));
+        }
+
+        public static void Dividir()
+        {
+            Console.WriteLine("Digite o primeiro numero: ");
+            int numero1 = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Digite o segundo numero: ");
+            int numero2 = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("A soma é: " + (numero1 / numero2));
         }
     }
+
 }
+
