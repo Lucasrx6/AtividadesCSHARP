@@ -1,10 +1,14 @@
-﻿using System.Security.AccessControl;
+using System;
+using System.Runtime.Intrinsics.Arm;
+using System.Security.AccessControl;
 using System.Security.Cryptography.X509Certificates;
 
 namespace ConsoleApp1
 {
     internal class Program
     {
+        static Random aleatorio = new Random();
+
         static void Main(string[] args)
         {
 
@@ -496,6 +500,7 @@ namespace ConsoleApp1
             } while (sair == 1);
              */
 
+            /*Menu com While e Metódos
             int operador;
             int sair = 0;
             
@@ -585,7 +590,153 @@ namespace ConsoleApp1
             int numero2 = int.Parse(Console.ReadLine());
 
             Console.WriteLine("A soma é: " + (numero1 / numero2));
+
+            */
+
+            int sair = 1;
+            int operador = 0;
+
+            do
+            {
+                Console.WriteLine("Bem Vindo");
+                Console.WriteLine("Escolha uma das seguintes opções abaixo");
+                Console.WriteLine("1 - Loterias");
+                Console.WriteLine("2 - Raspadinhas");
+                Console.WriteLine("0 - Sair");
+                operador = int.Parse(Console.ReadLine());
+
+                if (operador == 0)
+                {
+                    Console.WriteLine("Sessão finalizada");
+                    sair = 0;
+                }
+
+                else if (operador == 1)
+                {
+                    Loteria();
+                }
+
+                else if (operador == 2)
+                {
+                    Raspadinhas();
+                }
+
+                else
+                {
+                    Console.WriteLine("Opção invalida");
+                    Console.WriteLine("Selecione uma opção abaixo");
+                }
+
+            } while (sair == 1);
+
         }
+
+
+
+
+        private static void Loteria()
+        {
+            int sair = 1;
+            int operador = 0;
+            do
+            {
+
+                Console.WriteLine("Menu Loteria");
+                Console.WriteLine("1 - Raspadinha A");
+                Console.WriteLine("2 - Raspadinha B");
+                Console.WriteLine("0 - Menu anterior");
+                Console.int.Parse(Console.ReadLine());
+
+                if (operador == 0)
+                {
+                    Console.WriteLine("Retornando ao menu anterior")
+                    sair = 0;
+                }
+                
+                else if(operador == 1)
+                {
+                    LoteriaA();
+                }
+
+                else if(operador == 2)
+                {
+                    LoteriaB()
+                }
+
+                else
+                {
+                    Console.WriteLine("");
+                    sair = 1;
+                }
+
+            } while (sair == 1);
+        }
+
+
+
+        private static void Raspadinhas()
+        {
+            int sair = 1;
+
+            do
+            {
+                Console.WriteLine("Menu Loteria");
+                Console.WriteLine("1 - Raspadinha A");
+                Console.WriteLine("2 - Raspadinha B");
+                Console.WriteLine("0 - Menu anterior");
+                Console.int.Parse(Console.ReadLine());
+
+                if (operador == 0)
+                {
+                    Console.WriteLine("Retornando ao menu anterior")
+                    sair = 0;
+                }
+
+                else if (operador == 1)
+                {
+                    RaspadinhaA();
+                }
+
+                else if (operador == 2)
+                {
+                    RaspadinhaB();
+                }
+
+                else
+                {
+                    Console.WriteLine("Opção Invalida, tente novamente");
+                    sair = 1;
+                }
+
+
+            } while (sair == 1);
+        }
+
+
+
+
+        private static void RaspadinhaA()
+        {
+
+            int numero1 = aleatorio.Next(1, 10);
+
+        }
+
+
+
+
+        private static void RaspadinhaB()
+        {
+
+            int numero1 = aleatorio.Next(1, 10);
+
+        }
+
+
+
+
+
+
     }
 
 }
