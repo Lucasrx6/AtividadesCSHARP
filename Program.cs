@@ -650,28 +650,26 @@ namespace ConsoleApp1
 
                 Console.WriteLine("Menu Loteria");
                 Console.WriteLine("1 - Tentar um numero na Loteria");
-                Console.WriteLine("");
                 Console.WriteLine("0 - Menu anterior");
-                operador=int.Parse(Console.ReadLine());
+                operador = int.Parse(Console.ReadLine());
 
                 if (operador == 0)
                 {
-                    Console.WriteLine("Retornando ao menu anterior");
+                    Console.WriteLine("Retornando ao menu anterior, pressione Enter novamente");
                     sair = 0;
                 }
-                
-                else if(operador == 1)
+
+                else if (operador == 1)
                 {
-                    int sair = 1;
+                    Console.WriteLine("Numero premiado " + npremiado);
                     Console.WriteLine("Qual o numero deseja tentar na loteria entre 1000-9999");
                     njogador = int.Parse(Console.ReadLine());
-                    Console.WriteLine("Numero premiado " + npremiado);
+                    
 
-                    do
-                    {
-                        if (njogador > 1000 || njogador < 9999)
+
+                        if (njogador > 1000 && njogador < 9999)
                         {
-                            Console.WriteLine("Você escolheu o numero "+ njogador);
+                            Console.WriteLine("Você escolheu o numero " + njogador);
                             if (njogador == npremiado)
                             {
                                 Console.WriteLine("Você venceu o 1º premio");
@@ -690,26 +688,25 @@ namespace ConsoleApp1
                                 sair = 0;
                             }
 
-                            else
-                            {
-                                Console.WriteLine("Não foi dessa vez");
-                                sair = 0;
-                            }
+
+                        }
+                        else if (njogador < 1000 || njogador > 9999)
+                        {
+                            Console.WriteLine("Opção invalida, tente novamente");
+                            sair = 1;
                         }
 
                         else
                         {
                             Console.WriteLine("Opção invalida");
-                            sair = 1;
+                            sair = 0;
                         }
-
-                    } while (sair == 1);
 
                 }
 
-                else if(operador == 2)
+                else if (operador == 2)
                 {
-                   
+
                 }
 
                 else
@@ -737,11 +734,11 @@ namespace ConsoleApp1
                 Console.WriteLine("1 - Raspadinha A");
                 Console.WriteLine("2 - Raspadinha B");
                 Console.WriteLine("0 - Menu anterior");
-                operador=int.Parse(Console.ReadLine());
+                operador = int.Parse(Console.ReadLine());
 
                 if (operador == 0)
                 {
-                    Console.WriteLine("Retornando ao menu anterior");
+                    Console.WriteLine("Retornando ao menu anterior, pressione Enter novamente");
                     sair = 0;
                 }
 
