@@ -598,6 +598,7 @@ namespace ConsoleApp1
 
             do
             {
+                Console.Clear();
                 Console.WriteLine("Bem Vindo");
                 Console.WriteLine("Escolha uma das seguintes opções abaixo");
                 Console.WriteLine("1 - Loterias");
@@ -647,7 +648,7 @@ namespace ConsoleApp1
 
             do
             {
-
+                Console.Clear();
                 Console.WriteLine("Menu Loteria");
                 Console.WriteLine("1 - Tentar um numero na Loteria");
                 Console.WriteLine("0 - Menu anterior");
@@ -730,7 +731,8 @@ namespace ConsoleApp1
 
             do
             {
-                Console.WriteLine("Menu Loteria");
+                Console.Clear();
+                Console.WriteLine("Menu Raspadinha");
                 Console.WriteLine("1 - Raspadinha A");
                 Console.WriteLine("2 - Raspadinha B");
                 Console.WriteLine("0 - Menu anterior");
@@ -768,8 +770,47 @@ namespace ConsoleApp1
         private static void RaspadinhaA()
         {
 
-            int numero1 = aleatorio.Next(1, 10);
+            Console.Clear();
+            int nprincipal = aleatorio.Next(1, 10);
+            int premio = 0;
+            int numero1 = aleatorio.Next(1, 10); int p1 = aleatorio.Next(1, 100);
+            int numero2 = aleatorio.Next(1, 10); int p2 = aleatorio.Next(1, 100);
+            int numero3 = aleatorio.Next(1, 10); int p3 = aleatorio.Next(1, 100);
+            int numero4 = aleatorio.Next(1, 10); int p4 = aleatorio.Next(1, 100);
+            int numero5 = aleatorio.Next(1, 10); int p5 = aleatorio.Next(1, 100);
 
+            Console.WriteLine("Numero Principal: "+nprincipal);
+            Console.WriteLine("1º Numero " + numero1 + " (" + p1 + ")");
+            Console.WriteLine("2º Numero " + numero2 + " (" + p2 + ")");
+            Console.WriteLine("3º Numero " + numero3 + " (" + p3 + ")");
+            Console.WriteLine("4º Numero " + numero4 + " (" + p4 + ")");
+            Console.WriteLine("5º Numero " + numero5 + " (" + p5 + ")");
+
+            
+            if (numero1==nprincipal)
+            {
+                premio += p1;
+            }
+            if (numero2 == nprincipal)
+            {
+                premio += p2;
+            }
+            if (numero3 == nprincipal)
+            {
+                premio += p3;
+            }
+            if (numero4 == nprincipal)
+            {
+                premio += p4;
+            }
+            if (numero5 == nprincipal)
+            {
+                premio += p5;
+            }
+
+            Console.WriteLine("Premio: "+ premio);
+
+            Console.ReadKey();
         }
 
 
