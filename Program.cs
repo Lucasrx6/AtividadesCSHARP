@@ -636,31 +636,80 @@ namespace ConsoleApp1
 
         private static void Loteria()
         {
+
+            int npremiado;
             int sair = 1;
             int operador = 0;
+            int njogador;
+            Console.Clear();
+
+            npremiado = aleatorio.Next(1000, 10000);
+
             do
             {
 
                 Console.WriteLine("Menu Loteria");
-                Console.WriteLine("1 - Raspadinha A");
-                Console.WriteLine("2 - Raspadinha B");
+                Console.WriteLine("1 - Tentar um numero na Loteria");
+                Console.WriteLine("");
                 Console.WriteLine("0 - Menu anterior");
-                Console.int.Parse(Console.ReadLine());
+                operador=int.Parse(Console.ReadLine());
 
                 if (operador == 0)
                 {
-                    Console.WriteLine("Retornando ao menu anterior")
+                    Console.WriteLine("Retornando ao menu anterior");
                     sair = 0;
                 }
                 
                 else if(operador == 1)
                 {
-                    LoteriaA();
+                    int sair = 1;
+                    Console.WriteLine("Qual o numero deseja tentar na loteria entre 1000-9999");
+                    njogador = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Numero premiado " + npremiado);
+
+                    do
+                    {
+                        if (njogador > 1000 || njogador < 9999)
+                        {
+                            Console.WriteLine("Você escolheu o numero "+ njogador);
+                            if (njogador == npremiado)
+                            {
+                                Console.WriteLine("Você venceu o 1º premio");
+                                sair = 0;
+                            }
+
+                            else if (npremiado % 1000 == njogador % 1000)
+                            {
+                                Console.WriteLine("Você venceu o 2º premio");
+                                sair = 0;
+                            }
+
+                            else if (npremiado % 100 == njogador % 100)
+                            {
+                                Console.WriteLine("Você venceu o 3º premio");
+                                sair = 0;
+                            }
+
+                            else
+                            {
+                                Console.WriteLine("Não foi dessa vez");
+                                sair = 0;
+                            }
+                        }
+
+                        else
+                        {
+                            Console.WriteLine("Opção invalida");
+                            sair = 1;
+                        }
+
+                    } while (sair == 1);
+
                 }
 
                 else if(operador == 2)
                 {
-                    LoteriaB()
+                   
                 }
 
                 else
@@ -670,6 +719,9 @@ namespace ConsoleApp1
                 }
 
             } while (sair == 1);
+
+            Console.ReadKey();
+
         }
 
 
@@ -677,6 +729,7 @@ namespace ConsoleApp1
         private static void Raspadinhas()
         {
             int sair = 1;
+            int operador;
 
             do
             {
@@ -684,11 +737,11 @@ namespace ConsoleApp1
                 Console.WriteLine("1 - Raspadinha A");
                 Console.WriteLine("2 - Raspadinha B");
                 Console.WriteLine("0 - Menu anterior");
-                Console.int.Parse(Console.ReadLine());
+                operador=int.Parse(Console.ReadLine());
 
                 if (operador == 0)
                 {
-                    Console.WriteLine("Retornando ao menu anterior")
+                    Console.WriteLine("Retornando ao menu anterior");
                     sair = 0;
                 }
 
