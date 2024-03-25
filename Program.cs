@@ -819,7 +819,48 @@ namespace ConsoleApp1
         private static void RaspadinhaB()
         {
 
-            int numero1 = aleatorio.Next(1, 10);
+            int nprincipal = aleatorio.Next(1, 10);
+            int premio = aleatorio.Next(1, 100);
+
+            int n1 = aleatorio.Next(1, 10);
+            int n2 = aleatorio.Next(1, 10);
+            int n3 = aleatorio.Next(1, 10);
+            int n4 = aleatorio.Next(1, 10);
+            int n5 = aleatorio.Next(1, 10);
+            int n6 = aleatorio.Next(1, 10);
+            int n7 = aleatorio.Next(1, 10);
+            int n8 = aleatorio.Next(1, 10);
+            int n9 = aleatorio.Next(1, 10);
+
+            int contador = 0;
+
+            if (nprincipal == n1) contador++;
+            if (nprincipal == n2) contador++;
+            if (nprincipal == n3) contador++;
+            if (nprincipal == n4) contador++;
+            if (nprincipal == n5) contador++;
+            if (nprincipal == n6) contador++;
+            if (nprincipal == n7) contador++;
+            if (nprincipal == n8) contador++;
+            if (nprincipal == n9) contador++;
+
+            Console.WriteLine("Numero Principal: " +nprincipal+ " Premio: ("+premio+")");
+
+            Console.WriteLine(n1 + " " + n2 + " " + n3);
+            Console.WriteLine(n4 + " " + n5 + " " + n6);
+            Console.WriteLine(n7 + " " + n8 + " " + n9);
+
+            if(contador >= 3)
+            {
+                Console.WriteLine("Parabéns, ganhou o premio "+premio);
+            }
+
+            else
+            {
+                Console.WriteLine("Raspadinha não premiada.");
+            }
+
+            Console.ReadKey();
 
         }
 
