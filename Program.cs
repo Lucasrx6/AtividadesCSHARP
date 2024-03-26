@@ -15,7 +15,7 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
 
-            /*Atividades de Array*/
+            /*Atividades de Array
 
             string[] nomes = new string[] { "Ana", "Jose", "Afonso", "Lucas" };
 
@@ -28,10 +28,17 @@ namespace ConsoleApp1
             {
                 Console.WriteLine("Nome: "+(i+1)+": "+ nomes[i]+"/ Cidade: "+(i+1)+": " + cidade[i]);
             }
+            */
 
+            int[] numeros = new int[50];
+          
 
-
-
+;
+            for (int i = 0; i < numeros.Length; i++)
+            {
+                numeros[i] = aleatorio.Next(10, 100);
+                Console.WriteLine("Numero "+(i+1)+": " + numeros[i]);
+            }
 
             /*Relembrando a declaração de variáveis
              int num = 0;
