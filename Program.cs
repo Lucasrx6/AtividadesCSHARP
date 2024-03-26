@@ -720,7 +720,11 @@ namespace ConsoleApp1
                             Console.WriteLine("Você escolheu o numero " + njogador);
                             if (njogador == npremiado)
                             {
+<<<<<<< HEAD
                                 Console.WriteLine("Você venceu o 1º premio, no valor de " + valorpremio);
+=======
+                                Console.WriteLine("Você venceu o 1º premio, no valor de "+valorpremio);
+>>>>>>> 26eae38992a7f3a718751100ed625254c272e411
                                 saldo = saldo + valorpremio;
                                 Console.WriteLine("O seu saldo agora é de: " + saldo);
                                 sair = 0;
@@ -729,7 +733,11 @@ namespace ConsoleApp1
                             else if (npremiado % 1000 == njogador % 1000)
                             {
                                 valorpremio = valorpremio / 2;
+<<<<<<< HEAD
                                 Console.WriteLine("Você venceu o 2º premio, no valor de " + valorpremio);
+=======
+                                Console.WriteLine("Você venceu o 2º premio, no valor de "+valorpremio);
+>>>>>>> 26eae38992a7f3a718751100ed625254c272e411
                                 saldo = saldo + valorpremio;
                                 Console.WriteLine("O seu saldo agora é de: " + saldo);
                                 sair = 0;
@@ -738,7 +746,11 @@ namespace ConsoleApp1
                             else if (npremiado % 100 == njogador % 100)
                             {
                                 valorpremio = valorpremio / 3;
+<<<<<<< HEAD
                                 Console.WriteLine("Você venceu o 3º premio, no valor de" + valorpremio);
+=======
+                                Console.WriteLine("Você venceu o 3º premio, no valor de"+ valorpremio);
+>>>>>>> 26eae38992a7f3a718751100ed625254c272e411
                                 saldo = saldo + valorpremio;
                                 Console.WriteLine("O seu saldo agora é de: " + saldo);
                                 sair = 0;
@@ -747,7 +759,11 @@ namespace ConsoleApp1
 
                         }
 
+<<<<<<< HEAD
                         else if (njogador != npremiado)
+=======
+                        else if (njogador != npremiado )
+>>>>>>> 26eae38992a7f3a718751100ed625254c272e411
                         {
                             Console.WriteLine("Não foi dessa vez");
                             Console.WriteLine("Saldo " + saldo);
@@ -771,6 +787,7 @@ namespace ConsoleApp1
 
                     else if (operador == 2)
                     {
+<<<<<<< HEAD
 
                     }
 
@@ -781,6 +798,18 @@ namespace ConsoleApp1
                     }
 
                 }
+=======
+
+                    }
+
+                    else
+                    {
+                        Console.WriteLine("");
+                        sair = 1;
+                    }
+
+                 }
+>>>>>>> 26eae38992a7f3a718751100ed625254c272e411
                 else
                 {
                     Console.WriteLine("Saldo insulficiente");
@@ -849,6 +878,7 @@ namespace ConsoleApp1
             Console.WriteLine("Bem vindo " + nome);
             Console.WriteLine("Saldo: " + saldo);
             Console.WriteLine("===================================");
+<<<<<<< HEAD
 
             if (saldo > 5)
             {
@@ -896,6 +926,55 @@ namespace ConsoleApp1
                 saldo += premio;
 
                 Console.WriteLine("Saldo: " + saldo);
+=======
+
+            if(saldo > 5)
+            {
+                saldo -= 5;
+                Console.WriteLine("Voce pagou 5 reais");
+                Console.WriteLine("Seu saldo atual " + saldo);
+            int nprincipal = aleatorio.Next(1, 10);
+            int premio = 0;
+            int numero1 = aleatorio.Next(1, 10); int p1 = aleatorio.Next(1, 200);
+            int numero2 = aleatorio.Next(1, 10); int p2 = aleatorio.Next(1, 200);
+            int numero3 = aleatorio.Next(1, 10); int p3 = aleatorio.Next(1, 200);
+            int numero4 = aleatorio.Next(1, 10); int p4 = aleatorio.Next(1, 200);
+            int numero5 = aleatorio.Next(1, 10); int p5 = aleatorio.Next(1, 200);
+
+            Console.WriteLine("Numero Principal: " + nprincipal);
+            Console.WriteLine("1º Numero " + numero1 + " (" + p1 + ")");
+            Console.WriteLine("2º Numero " + numero2 + " (" + p2 + ")");
+            Console.WriteLine("3º Numero " + numero3 + " (" + p3 + ")");
+            Console.WriteLine("4º Numero " + numero4 + " (" + p4 + ")");
+            Console.WriteLine("5º Numero " + numero5 + " (" + p5 + ")");
+
+
+            if (numero1 == nprincipal)
+            {
+                premio += p1;
+            }
+            if (numero2 == nprincipal)
+            {
+                premio += p2;
+            }
+            if (numero3 == nprincipal)
+            {
+                premio += p3;
+            }
+            if (numero4 == nprincipal)
+            {
+                premio += p4;
+            }
+            if (numero5 == nprincipal)
+            {
+                premio += p5;
+            }
+
+            Console.WriteLine("Premio: " + premio);
+                saldo += premio;
+
+                Console.WriteLine("Saldo: "+saldo);
+>>>>>>> 26eae38992a7f3a718751100ed625254c272e411
 
             }
             else
@@ -1047,7 +1126,11 @@ namespace ConsoleApp1
                     {
                         Console.WriteLine("Valor incorreto, digite novamente");
                     }
+<<<<<<< HEAD
                     else if (saldo - valor < 0)
+=======
+                    else if (saldo-valor < 0)
+>>>>>>> 26eae38992a7f3a718751100ed625254c272e411
                     {
                         Console.WriteLine("Valor incorreto, digite novamente");
                     }
@@ -1079,8 +1162,13 @@ namespace ConsoleApp1
             do
             {
 
+<<<<<<< HEAD
 
 
+=======
+            
+            
+>>>>>>> 26eae38992a7f3a718751100ed625254c272e411
                 Console.Clear();
                 Console.WriteLine("Bem vindo " + nome);
                 Console.WriteLine("Saldo: " + saldo);
@@ -1091,8 +1179,13 @@ namespace ConsoleApp1
                 operador = int.Parse(Console.ReadLine());
 
                 if (operador == 1)
+<<<<<<< HEAD
                 {
                     Console.WriteLine("Saldo atual: " + saldo);
+=======
+                    {
+                    Console.WriteLine("Saldo atual: "+saldo);
+>>>>>>> 26eae38992a7f3a718751100ed625254c272e411
                     Console.WriteLine("Qual o valor deseja depositar: ");
                     valor = int.Parse(Console.ReadLine());
 
@@ -1116,9 +1209,12 @@ namespace ConsoleApp1
 
             } while (sair == 1);
             Console.ReadKey();
+<<<<<<< HEAD
             */
 
 
+=======
+>>>>>>> 26eae38992a7f3a718751100ed625254c272e411
 
 
 
