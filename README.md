@@ -10,6 +10,7 @@ Aprimorar a lógica de programação utilizando as técnologicas C# e .NET.
 
 ## Conteudo
 Atividades e desafios de programação simples, intermédiarios e avançados com suas respectivas soluções.
+Liste de exercicios comum
 
 _______________________________________________
 
